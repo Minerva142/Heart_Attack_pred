@@ -52,10 +52,10 @@ st.write("https://www.kaggle.com/datasets/iamsouravbanerjee/heart-attack-predict
 
 # model types
 st.write("""## Trained Model Types""")
-st.write("Hypertension: ")
-st.write("Stroke: ")
-st.write("Diabetes: ")
-st.write("Heart Attack: ")
+st.write("Hypertension: DecisionTreeClassifier")
+st.write("Stroke: RandomForestClassifier")
+st.write("Diabetes: XGBClassifier")
+st.write("Heart Attack: RandomForestClassifier")
 
 #Bring in the data
 data = pd.read_csv('heart_attack_prediction_dataset.csv')
