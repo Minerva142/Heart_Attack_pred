@@ -5,28 +5,28 @@ import numpy as np
 from PIL import Image
 import pickle
 
-with open('best_model_hypertension.pkl', 'rb') as file:
+with open('models/best_model_hypertension.pkl', 'rb') as file:
     hypertension_model = pickle.load(file)
 
-with open('hypertension_scaler.pkl', 'rb') as file:
+with open('models/hypertension_scaler.pkl', 'rb') as file:
     hypertension_scaler = pickle.load(file)
 
-with open('best_model_stroke.pkl', 'rb') as file:
+with open('models/best_model_stroke.pkl', 'rb') as file:
     stroke_model = pickle.load(file)
 
-with open('stroke_scaler.pkl', 'rb') as file:
+with open('models/stroke_scaler.pkl', 'rb') as file:
     stroke_scaler = pickle.load(file)
 
-with open('best_model_diabetes.pkl', 'rb') as file:
+with open('models/best_model_diabetes.pkl', 'rb') as file:
     diabetes_model = pickle.load(file)
 
-with open('diabetes_scaler.pkl', 'rb') as file:
+with open('models/diabetes_scaler.pkl', 'rb') as file:
     diabetes_scaler = pickle.load(file)
 
-with open('best_model_heart.pkl', 'rb') as file:
+with open('models/best_model_heart.pkl', 'rb') as file:
     heart_model = pickle.load(file)
 
-with open('best_scaler_heart.pkl', 'rb') as file:
+with open('models/best_scaler_heart.pkl', 'rb') as file:
     heart_scaler = pickle.load(file)
 
 #Create header
@@ -36,11 +36,11 @@ st.write("view your predictions about your health condition based on your answer
 
 #image
 st.write("""## Training Flow Diagram""")
-image = Image.open('Train_diag.png')
+image = Image.open('images/Train_diag.png')
 st.image(image)
 
 st.write("""## Prediction Flow Diagram""")
-image = Image.open('Test_diag_v2.png')
+image = Image.open('images/Test_diag_v2.png')
 st.image(image)
 
 
@@ -49,6 +49,7 @@ st.write("""## Dataset links""")
 
 st.write("https://www.kaggle.com/datasets/prosperchuks/health-dataset?select=diabetes_data.csv")
 st.write("https://www.kaggle.com/datasets/iamsouravbanerjee/heart-attack-prediction-dataset")
+st.write("https://www.kaggle.com/datasets/alexteboul/diabetes-health-indicators-dataset")
 
 # model types
 st.write("""## Trained Model Types""")
